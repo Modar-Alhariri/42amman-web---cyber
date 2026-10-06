@@ -1,39 +1,19 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 id="result" class="result">0</h1>
+    <div class="container">
 
-    <title>Task Manager</title>
-
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
-</head>
-
-<body>
-
-    <main class="container">
-
-        <h1>Task Manager</h1>
-
-        <div class="form">
-            <input
-                type="text"
-                id="taskInput"
-                placeholder="Enter a task"
-            >
-
-            <button id="addButton">Add</button>
-        </div>
-
-        <p>
-            Total Tasks:
-            <span id="counter">0</span>
-        </p>
-
-        <ul id="taskList"></ul>
-
-    </main>
-
-</body>
+        <button id="increment" class="button button-increment">increment</button>
+        <button id="decrement" class="button button-decrement">decrement</button>
+        <button id="reset" class="button button-reset">reset</button>
+        <script src="script.js" defer></script>
+    </div>
+  </body>
 </html>

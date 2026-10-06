@@ -1,90 +1,51 @@
-let taskInput = document.getElementById("taskInput");
-let addButton = document.getElementById("addButton");
-let taskList = document.getElementById("taskList");
-let counter = document.getElementById("counter");
+let result = document.getElementById("result");
 
-let totalTasks = 0;
+let increment = document.getElementById("increment");
+
+let decrement = document.getElementById("decrement");
+
+let resetButton = document.getElementById("reset");
 
 
-// Add task using button
-addButton.addEventListener("click", function () {
-    addTask();
+increment.addEventListener("click", () => {
+    plus(result);
+});
+decrement.addEventListener("click", () => {
+    mines(result);
+});
+resetButton.addEventListener("click", () => {
+    reset(result);
 });
 
 
-// Add task using Enter key
-taskInput.addEventListener("keydown", function (event) {
-    if (event.key === "Enter") {
-        addTask();
-    }
-});
+
+function plus(result) {
+    result.textContent = Number(result.textContent) + 1;
+    check(result);
+}
 
 
-function addTask() {
+function mines(result) {
+    result.textContent = Number(result.textContent) - 1;
+        check(result);
 
-    if (taskInput.value === "") {
-        return;
-    }
-
-
-    // Create li
-    let li = document.createElement("li");
-
-    li.classList.add("task");
+}
 
 
-    // Create task text
-    let taskText = document.createElement("span");
-
-    taskText.textContent = taskInput.value;
-
-    taskText.classList.add("task-text");
+function reset(result) {
+   result.textContent=Number(result.textContent-result.textContent);
+   check(result);
+}
 
 
-    // Mark task as completed
-    taskText.addEventListener("click", function () {
-
-        taskText.classList.toggle("completed");
-
-    });
-
-
-    // Create delete button
-    let deleteButton = document.createElement("button");
-
-    deleteButton.textContent = "Delete";
-
-    deleteButton.classList.add("delete-button");
-
-
-    // Delete task
-    deleteButton.addEventListener("click", function () {
-
-        li.remove();
-
-        totalTasks--;
-
-        counter.textContent = totalTasks;
-
-    });
-
-
-    // Add elements to li
-    li.appendChild(taskText);
-
-    li.appendChild(deleteButton);
-
-
-    // Add li to list
-    taskList.appendChild(li);
-
-
-    // Update counter
-    totalTasks++;
-
-    counter.textContent = totalTasks;
-
-
-    // Clear input
-    taskInput.value = "";
+function check(result) {
+ if (result.textContent>0) {
+    result.style.color="green";
+ }
+ else if(result.textContent<0){
+    result.style.color="red";
+ }
+ else{
+     result.style.color="gray";
+ }
 }

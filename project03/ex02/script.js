@@ -1,51 +1,13 @@
-let result = document.getElementById("result");
+const title = document.getElementById("title");
+const message = document.querySelector(".message");
+const button = document.getElementById("activate");
 
-let increment = document.getElementById("increment");
+button.addEventListener("click", function () {
+    title.textContent = " Activated";
 
-let decrement = document.getElementById("decrement");
+    message.textContent = "The DOM has been updated.";
 
-let resetButton = document.getElementById("reset");
+    title.style.color = "blue";
 
-
-increment.addEventListener("click", () => {
-    plus(result);
+    title.classList.add("active");
 });
-decrement.addEventListener("click", () => {
-    mines(result);
-});
-resetButton.addEventListener("click", () => {
-    reset(result);
-});
-
-
-
-function plus(result) {
-    result.textContent = Number(result.textContent) + 1;
-    check(result);
-}
-
-
-function mines(result) {
-    result.textContent = Number(result.textContent) - 1;
-        check(result);
-
-}
-
-
-function reset(result) {
-   result.textContent=Number(result.textContent-result.textContent);
-   check(result);
-}
-
-
-function check(result) {
- if (result.textContent>0) {
-    result.style.color="green";
- }
- else if(result.textContent<0){
-    result.style.color="red";
- }
- else{
-     result.style.color="gray";
- }
-}

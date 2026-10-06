@@ -1,72 +1,25 @@
-* {
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 40px;
-}
-
-.container {
-    max-width: 600px;
-    margin: auto;
-    background-color: white;
-    padding: 30px;
-    border-radius: 10px;
-}
-
-h1 {
-    text-align: center;
-}
-
-.form {
+body{
     display: flex;
-    gap: 10px;
-}
-
-#taskInput {
-    flex: 1;
-    padding: 10px;
-}
-
-#addButton {
-    padding: 10px 20px;
-    cursor: pointer;
-    background-color: green;
-    color: #ddd;
-    border-radius: 10px;
-}
-
-#taskList {
-    padding: 0;
-    list-style: none;
-}
-
-.task {
-    display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 12px;
-    margin-top: 10px;
-    border: 1px solid #ddd;
+    flex-direction: column;
 }
-
-.task-text {
-    cursor: pointer;
+.result{
+    font-size: 100px;
+    
 }
-
-.delete-button {
-    padding: 5px 10px;
-    cursor: pointer;
-    background-color: red;
-    width: 80px;
+.button{
+    width: 100px;
     height: 50px;
-    color: #ddd;
-    border-radius: 10px;
+    color: aliceblue;
+    border-radius: 15px;
 }
-
-.completed {
-    text-decoration: line-through;
+.button-increment{
+    background-color:rgb(17, 78, 0) ;
+}
+.button-decrement{
+    background-color:rgb(0, 65, 111) ;
+}
+.button-reset{
+    background-color:rgb(111, 0, 54) ;
 }

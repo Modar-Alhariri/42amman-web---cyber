@@ -1,25 +1,12 @@
-body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+body {
+    font-family: Arial, sans-serif;
 }
-.result{
-    font-size: 100px;
-    
+
+.container {
+    padding: 30px;
 }
-.button{
-    width: 100px;
-    height: 50px;
-    color: aliceblue;
-    border-radius: 15px;
-}
-.button-increment{
-    background-color:rgb(17, 78, 0) ;
-}
-.button-decrement{
-    background-color:rgb(0, 65, 111) ;
-}
-.button-reset{
-    background-color:rgb(111, 0, 54) ;
+
+.active {
+    color: green;
+    font-weight: bold;
 }
