@@ -1,0 +1,12 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    padding: 30px;
+}
+
+.active {
+    color: green;
+    font-weight: bold;
+}
