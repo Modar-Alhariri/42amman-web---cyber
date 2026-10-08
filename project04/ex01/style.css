@@ -1,0 +1,492 @@
+
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    background-color: #FEF3E2;
+    color: #2A1A0E;
+
+    font-family: Arial, sans-serif;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+}
+
+hr {
+    border: none;
+    height: 2px;
+    background-color: #2A1A0E;
+
+    margin: 0;
+}
+
+.section {
+    padding: 60px 8%;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+
+
+.header {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 5%;
+
+    background-color: #2A1A0E;
+    color: aliceblue;
+
+    font-size: 20px;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+}
+
+.header h4 {
+    margin: 0;
+}
+
+.nav {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+.header a {
+    text-decoration: none;
+
+    color: #F4AE52;
+
+    transition: color 0.3s ease;
+}
+
+.header a:hover {
+    color: white;
+}
+
+
+
+.languageButton {
+    border: none;
+
+    padding: 10px 15px;
+
+    border-radius: 20px;
+
+    background-color: #F4AE52;
+    color: #2A1A0E;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    transition:
+        transform 0.2s ease,
+        background-color 0.3s ease;
+}
+
+#themeButton:hover {
+    transform: scale(1.05);
+}
+
+
+
+.about {
+    min-height: 500px;
+
+    display: flex;
+
+    flex-direction: row;
+
+    justify-content: space-around;
+    align-items: center;
+
+    gap: 40px;
+
+    font-size: larger;
+    font-weight: bolder;
+}
+
+.about-text {
+    max-width: 550px;
+}
+
+.about h1 {
+    font-size: 45px;
+
+    margin-bottom: 20px;
+}
+
+.profile-image {
+    width: 400px;
+    max-width: 100%;
+
+    height: auto;
+
+    border-radius: 20px;
+     opacity: 1;
+    transition: opacity 0.4s ease-in-out;
+}
+.profile-image.fade-out {
+    opacity: 0;
+}
+.switcher{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.switch-btn{
+    position: relative;
+    
+    bottom: 50px;
+    width: 100px;
+    background-color: #2A1A0E;
+    color: #f5f5f5;
+    height: 40px;
+    border-radius: 20px;
+}
+
+.skills-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.skill-card {
+    background-color: #2A1A0E;
+    color: aliceblue;
+
+    padding: 20px;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.skill-card h3 {
+    color: #F4AE52;
+}
+
+
+
+.projects-container {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 25px;
+}
+
+.project-card {
+    flex: 1 1 220px;
+
+    max-width: 300px;
+
+    padding: 25px;
+
+    background-color: #2A1A0E;
+
+    color: aliceblue;
+
+    border-radius: 20px;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.project-card h3 {
+    color: #F4AE52;
+}
+
+.project-card a {
+    display: inline-block;
+
+    margin-top: 15px;
+
+    padding: 8px 15px;
+
+    background-color: #F4AE52;
+
+    color: #2A1A0E;
+
+    text-decoration: none;
+
+    border-radius: 15px;
+
+    font-weight: bold;
+}
+
+
+
+.hobbies-container {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 20px;
+}
+
+.hobby-card {
+    flex: 1 1 250px;
+
+    padding: 25px;
+
+    background-color: #2A1A0E;
+
+    color: aliceblue;
+
+    border-radius: 20px;
+
+    text-align: center;
+}
+
+.hobby-card h3 {
+    color: #F4AE52;
+}
+
+
+
+.contact form {
+    max-width: 650px;
+
+    margin: auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.form-group label {
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+
+    padding: 12px;
+
+    border: 2px solid #2A1A0E;
+
+    border-radius: 10px;
+
+    background-color: white;
+
+    font-size: 16px;
+
+    font-family: inherit;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.submit-button {
+    padding: 12px 20px;
+
+    border: none;
+
+    border-radius: 20px;
+
+    background-color: #2A1A0E;
+
+    color: #F4AE52;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    transform: translateY(-2px);
+
+    background-color: #3d2718;
+}
+
+
+
+.footer {
+    padding: 30px;
+
+    background-color: #2A1A0E;
+
+    color: aliceblue;
+
+    text-align: center;
+}
+
+.footer p {
+    margin: 8px 0;
+}
+
+
+
+
+body.dark-mode {
+    background-color: #181818;
+
+    color: #f5f5f5;
+}
+
+body.dark-mode hr {
+    background-color: #F4AE52;
+}
+
+body.dark-mode .form-group input,
+body.dark-mode .form-group textarea {
+    background-color: #2a2a2a;
+
+    color: white;
+
+    border-color: #F4AE52;
+}
+
+
+
+@media (max-width: 768px) {
+
+    .header {
+        flex-direction: column;
+
+        gap: 20px;
+
+        text-align: center;
+    }
+
+    .nav {
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .about {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .about h1 {
+        font-size: 35px;
+    }
+
+    .profile-image {
+        width: 280px;
+    }
+
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+
+    .projects-container {
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .project-card {
+        width: 100%;
+
+        max-width: 500px;
+    }
+
+    .hobbies-container {
+        flex-direction: column;
+    }
+
+    .hobby-card {
+        width: 100%;
+    }
+}
+
+
+
+@media (max-width: 480px) {
+
+    .section {
+        padding: 40px 5%;
+    }
+
+    .header {
+        padding: 15px;
+    }
+
+    .nav {
+        gap: 10px;
+    }
+
+    .nav a {
+        font-size: 14px;
+    }
+
+    #themeButton {
+        font-size: 12px;
+    }
+
+    .about h1 {
+        font-size: 30px;
+    }
+}
+
